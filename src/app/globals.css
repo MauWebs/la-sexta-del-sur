@@ -1,0 +1,40 @@
+html {
+    background-color: #FAF9F9;
+}
+
+body {
+    margin: 0px;
+}
+
+a {
+    text-decoration: none;
+    font-size: 20px;
+    color: inherit;
+    outline: none;
+    color: #000;
+    opacity: 70%;
+    transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+a:hover {
+    color: #FF5C00;
+    opacity: 1;
+}
+
+::selection {
+    background: #FF5C00;
+    color: white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
