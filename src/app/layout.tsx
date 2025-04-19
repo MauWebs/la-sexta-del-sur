@@ -17,6 +17,11 @@ const ttCommonsDemiBold = localFont({
   variable: '--font-tt-commons-demibold',
 });
 
+const ttCommonsBold = localFont({
+  src: '../../public/fonts/TT-COMMONS/TTCommons-Bold.ttf',
+  variable: '--font-tt-commons-bold',
+});
+
 const publicoHeadlineBold = localFont({
   src: '../../public/fonts/Publico-Headline-Web/Publico Headline Web Bold.ttf',
   variable: '--font-publico-headline-bold',
@@ -35,11 +40,12 @@ export default function RootLayout({
       <body className={`
           ${ttCommonsRegular.className} 
           ${ttCommonsMedium.variable} 
-          ${ttCommonsDemiBold.variable} 
+          ${ttCommonsDemiBold.variable}
+          ${ttCommonsBold.variable}
           ${publicoHeadlineBold.variable}
         `}>
         {children}
       </body>
     </html>
   );
-}
+};

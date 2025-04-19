@@ -26,7 +26,7 @@ export default function LatestPosts() {
     ];
 
     return (
-        <div style={{ padding: '40px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '40px' }}>
+        <div style={{ padding: '20px 20px 40px 34px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '2px' }}>
             {posts.map((post, index) => {
                 const isEven = index % 2 === 0;
                 return (
@@ -40,7 +40,7 @@ export default function LatestPosts() {
                                 height: '318px',
                                 alignItems: 'center',
                                 justifyContent: 'center',
-                                position: 'relative', // Necesario para el "fill" encima de la imagen
+                                position: 'relative',
                             }}
                         >
                             <div style={{
@@ -53,7 +53,7 @@ export default function LatestPosts() {
                                 alignItems: 'flex-start',
                             }}>
                                 <span style={{
-                                    fontSize: '15px',
+                                    fontSize: '18px',
                                     color: '#FF5C00',
                                     fontFamily: 'var(--font-tt-commons-demibold)',
                                     marginBottom: '8px'
@@ -62,6 +62,7 @@ export default function LatestPosts() {
                                 </span>
 
                                 <h3 style={{
+                                    color: '#292219',
                                     fontSize: '27px',
                                     fontWeight: 'bold',
                                     fontFamily: 'var(--font-publico-headline-bold)',
@@ -81,8 +82,8 @@ export default function LatestPosts() {
 
                             {post.img && (
                                 <div style={{
-                                    position: 'relative', 
-                                    width: '466px', 
+                                    position: 'relative',
+                                    width: '466px',
                                     height: '280px'
                                 }}>
                                     <img
@@ -101,7 +102,7 @@ export default function LatestPosts() {
                                         right: 0,
                                         bottom: 0,
                                         backgroundColor: 'rgba(0, 0, 0, 0.10)',
-                                        zIndex: 1, 
+                                        zIndex: 1,
                                     }} />
                                 </div>
                             )}
@@ -130,4 +131,4 @@ export default function LatestPosts() {
             })}
         </div>
     );
-}
+};
