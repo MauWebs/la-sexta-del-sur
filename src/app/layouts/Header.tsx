@@ -49,6 +49,10 @@ export default function Header() {
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            zIndex: 1000,
         }}>
             <img
                 src="/icons/globe-with-meridians.svg"

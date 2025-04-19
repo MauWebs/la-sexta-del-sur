@@ -1,8 +1,8 @@
 'use client';
-
 import { usePathname } from 'next/navigation';
 
 export default function Navbar() {
+
     const pathname = usePathname();
     const isHome = pathname === '/' || pathname === '/#';
 
@@ -11,10 +11,16 @@ export default function Navbar() {
             height: '57px',
             backgroundColor: 'white',
             boxShadow: '0px 1px 7px rgba(0, 0, 0, 0.08)',
-            justifyContent: 'space-between',
+            justifyContent: 'center',
             alignItems: 'center',
-            padding: '0 35px',
+            padding: '0px 35px',
             display: 'flex',
+            position: 'fixed',
+            top: '33px',
+            left: 0,
+            width: '100%',
+            zIndex: 999,
+            boxSizing: 'border-box',
         }}>
             <div style={{ display: 'flex', alignItems: 'center' }}>
                 <img src="/logo.svg" alt="logo del noticiero" style={{ paddingTop: "2px", height: '45px' }} />
@@ -22,11 +28,13 @@ export default function Navbar() {
 
             <div style={{
                 display: 'flex',
-                gap: '20px',
+                gap: '40px',
                 fontSize: '20px',
                 fontFamily: 'var(--font-tt-commons-regular)',
                 justifyContent: 'center',
+                flexWrap: 'wrap',
                 flex: 1,
+                boxSizing: 'border-box',
             }}>
                 <a
                     href="#"
@@ -60,7 +68,7 @@ export default function Navbar() {
             <div style={{
                 display: 'flex',
                 alignItems: 'center',
-                gap: '15px',
+                gap: '10px',
             }}>
                 <a href="https://www.instagram.com/lasextadelsur/" target="_blank" rel="noopener noreferrer">
                     <img src="/social-media/instagram-icon.svg" alt="Instagram" style={{ height: '30px', width: '30px' }} />
@@ -74,4 +82,4 @@ export default function Navbar() {
             </div>
         </nav>
     );
-}
+};
