@@ -108,24 +108,20 @@ export default function LatestPosts() {
                             )}
                         </div>
 
-                        {index !== posts.length - 1 && (
-                            <>
-                                <div
-                                    style={{
-                                        height: '2px',
-                                        backgroundColor: '#7C7C7C',
-                                        margin: '20px 0 5px 0',
-                                    }}
-                                />
-                                <div
-                                    style={{
-                                        height: '2px',
-                                        backgroundColor: '#7C7C7C',
-                                        margin: '5px 0 20px 0',
-                                    }}
-                                />
-                            </>
-                        )}
+                        <div
+                            style={{
+                                height: '2px',
+                                backgroundColor: '#7C7C7C',
+                                margin: '20px 0 5px 0',
+                            }}
+                        />
+                        <div
+                            style={{
+                                height: '2px',
+                                backgroundColor: '#7C7C7C',
+                                margin: '5px 0 20px 0',
+                            }}
+                        />
                     </div>
                 );
             })}

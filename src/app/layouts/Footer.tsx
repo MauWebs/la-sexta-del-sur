@@ -12,8 +12,8 @@ export default function Footer() {
         >
             <div style={{
                 display: 'flex',
-                justifyContent: 'center',  // Esto asegura que los íconos estén centrados
-                gap: '20px',  // Espaciado entre los íconos
+                justifyContent: 'center',
+                gap: '20px',
             }}>
                 <a href="https://www.instagram.com/lasextadelsur/" target="_blank" rel="noopener noreferrer">
                     <img src="/social-media/instagram-icon.svg" alt="Instagram" style={{ height: '40px', width: '40px' }} />
