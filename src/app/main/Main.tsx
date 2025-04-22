@@ -1,12 +1,14 @@
 'use client';
 import LatestPosts from "./LatestPosts";
+import TrustedBySection from "./TrustedBySection";
 import VideosOfYoutube from "./VideosOfYoutube";
 
 export default function Main() {
     return (
         <main>
             <LatestPosts />
-            <VideosOfYoutube/>
+            <TrustedBySection />
+            <VideosOfYoutube />
         </main>
     )
 };

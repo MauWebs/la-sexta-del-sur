@@ -1,6 +1,7 @@
 'use client';
 
 export default function LatestPosts() {
+
     const posts = [
         {
             id: 1,
@@ -107,19 +108,13 @@ export default function LatestPosts() {
                                 </div>
                             )}
                         </div>
-
-                        <div
-                            style={{
-                                height: '2px',
-                                backgroundColor: '#7C7C7C',
-                                margin: '20px 0 5px 0',
-                            }}
-                        />
+        
                         <div
                             style={{
                                 height: '2px',
                                 backgroundColor: '#7C7C7C',
                                 margin: '5px 0 20px 0',
+                                opacity:'50%',
                             }}
                         />
                     </div>
