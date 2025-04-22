@@ -16,6 +16,16 @@ export default function TrustedBySection() {
                 paddingTop: '0px',
             }}
         >
+
+            <div
+                style={{
+                    height: '2px',
+                    backgroundColor: '#7C7C7C',
+                    margin: '0px 20px 20px 20px',
+                    opacity: '50%',
+                }}
+            />
+
             <div
                 style={{
                     maxWidth: '1100px',
@@ -32,7 +42,7 @@ export default function TrustedBySection() {
                         fontFamily: 'var(--font-publico-headline-bold)',
                     }}
                 >
-                    Empresas que confían en nosotros
+                    Empresas que confían en nosotros diario
                 </h2>
                 <div
                     style={{
@@ -75,7 +85,7 @@ export default function TrustedBySection() {
                 style={{
                     height: '2px',
                     backgroundColor: '#7C7C7C',
-                    margin: '40px 20px 0px 20px',
+                    margin: '0px 20px 0px 20px',
                     opacity: '50%',
                 }}
             />

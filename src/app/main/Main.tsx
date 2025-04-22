@@ -1,4 +1,5 @@
 'use client';
+
 import LatestPosts from "./LatestPosts";
 import TrustedBySection from "./TrustedBySection";
 import VideosOfYoutube from "./VideosOfYoutube";

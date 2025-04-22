@@ -1,5 +1,8 @@
 'use client';
 
+import PortOfBahiaBlancaVideo from "./PortOfBahiaBlancaVideo";
+import PortOfBahiaBlancaBanner from "./PortOfBahiaBlancaBanner";
+
 export default function LatestPosts() {
 
     const posts = [
@@ -27,11 +30,15 @@ export default function LatestPosts() {
     ];
 
     return (
-        <div style={{ padding: '20px 20px 40px 34px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '2px' }}>
+        <div style={{ padding: '37px 20px 40px 34px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '2px' }}>
+
+            <PortOfBahiaBlancaBanner />
+
             {posts.map((post, index) => {
                 const isEven = index % 2 === 0;
                 return (
                     <div key={post.id}>
+
                         <div
                             style={{
                                 display: 'flex',
@@ -108,18 +115,20 @@ export default function LatestPosts() {
                                 </div>
                             )}
                         </div>
-        
+
                         <div
                             style={{
                                 height: '2px',
                                 backgroundColor: '#7C7C7C',
                                 margin: '5px 0 20px 0',
-                                opacity:'50%',
+                                opacity: '50%',
                             }}
                         />
+
                     </div>
                 );
             })}
+            <PortOfBahiaBlancaVideo />
         </div>
     );
 };
