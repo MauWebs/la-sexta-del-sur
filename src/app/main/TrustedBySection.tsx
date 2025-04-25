@@ -16,16 +16,6 @@ export default function TrustedBySection() {
                 paddingTop: '0px',
             }}
         >
-
-            <div
-                style={{
-                    height: '2px',
-                    backgroundColor: '#7C7C7C',
-                    margin: '0px 20px 20px 20px',
-                    opacity: '50%',
-                }}
-            />
-
             <div
                 style={{
                     maxWidth: '1100px',
