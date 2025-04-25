@@ -1,4 +1,3 @@
-import { SpeedInsights } from '@vercel/speed-insights/next';
 import localFont from 'next/font/local';
 import type { Metadata } from 'next';
 import './globals.css';
@@ -48,7 +47,6 @@ export default function RootLayout({
         ${ttCommonsBold.variable}
         ${publicoHeadlineBold.variable}
       `}>
-        <SpeedInsights />
         {children}
       </body>
     </html>
