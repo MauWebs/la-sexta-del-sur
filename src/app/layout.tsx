@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'La Sexta Del Sur',
   description: 'La sexta del sur',
   icons: {
-    icon: '/favicon.ico',
+    icon: '/favicon-main.ico',
   },
 };
 
