@@ -1,6 +1,4 @@
 'use client';
-
-import PortOfBahiaBlancaVideo from "./PortOfBahiaBlancaVideo";
 import PortOfBahiaBlancaBanner from "./PortOfBahiaBlancaBanner";
 
 export default function LatestPosts() {
@@ -18,7 +16,7 @@ export default function LatestPosts() {
             target: 'Generales',
             title: 'McDonalds de Bahía Blanca lanza una promoción sin precedentes y desata una avalancha de clientes en su local principal en el shopping.',
             description: 'La reconocida cadena de comida rápida sorprendió a los habitantes de Bahía Blanca con una oferta especial que atrajo a cientos de personas desde las primeras horas del día. Largas filas se formaron en el local principal, con clientes ansiosos por aprovechar descuentos exclusivos y promociones inéditas. La noticia se viralizó rápidamente en redes sociales, generando aún más expectativa y aumentando la afluencia de público. Algunos clientes esperaron por horas para acceder a la promoción, mientras el personal del restaurante redobló esfuerzos para atender la demanda. La iniciativa, pensada para fidelizar clientes y celebrar una fecha especial, marcó un récord de concurrencia y dejó en claro la fuerte presencia de la marca en la ciudad. Expertos en marketing destacan el impacto positivo de la estrategia, mientras que los clientes esperan que se repitan este tipo de promociones en el futuro, beneficiando a consumidores.',
-            img: '/mcdonalds.svg',
+            img: '/McDonalds.svg',
         },
         {
             id: 3,
@@ -115,20 +113,9 @@ export default function LatestPosts() {
                                 </div>
                             )}
                         </div>
-
-                        <div
-                            style={{
-                                height: '2px',
-                                backgroundColor: '#7C7C7C',
-                                margin: '5px 0 20px 0',
-                                opacity: '50%',
-                            }}
-                        />
-
                     </div>
                 );
             })}
-            <PortOfBahiaBlancaVideo />
         </div>
     );
 };

@@ -34,16 +34,6 @@ export default function TrustedBySection() {
                     textAlign: 'center',
                 }}
             >
-                <h2
-                    style={{
-                        fontSize: '2rem',
-                        marginBottom: '2.5rem',
-                        color: '#292219',
-                        fontFamily: 'var(--font-publico-headline-bold)',
-                    }}
-                >
-                    Empresas que confían en nosotros diario
-                </h2>
                 <div
                     style={{
                         display: 'grid',
