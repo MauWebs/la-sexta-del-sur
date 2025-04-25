@@ -5,6 +5,9 @@ import './globals.css';
 export const metadata: Metadata = {
   title: 'La Sexta Del Sur',
   description: 'La sexta del sur',
+  icons: {
+    icon: '/favicon.ico',
+  },
 };
 
 const ttCommonsRegular = localFont({
@@ -48,4 +51,4 @@ export default function RootLayout({
       </body>
     </html>
   );
-}
+};
