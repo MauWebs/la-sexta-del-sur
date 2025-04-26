@@ -6,8 +6,6 @@ import PortOfBahiaBlancaBanner from "./PortOfBahiaBlancaBanner";
 
 export default function LatestPosts() {
 
-    const [isHovered, setIsHovered] = useState(false);
-
     const sortedPosts = [...allPosts].sort((a, b) => b.id - a.id);
     const mainPosts = sortedPosts.slice(0, 3);
 
@@ -24,6 +22,7 @@ export default function LatestPosts() {
 
             {mainPosts.map((post, index) => {
                 const isEven = index % 2 === 0;
+                const [isHovered, setIsHovered] = useState(false);
                 return (
                     <div key={post.id}>
                         <Link
