@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+
 const postsFilePath = path.join(process.cwd(), 'data', 'posts.json');
 
 interface Post {
@@ -15,18 +16,22 @@ const readPosts = (): Post[] => {
     try {
         const data = fs.readFileSync(postsFilePath, 'utf-8');
         return JSON.parse(data);
-    } catch (err) {
-        console.error('Error leyendo el archivo JSON:', err);
+    } catch (err: unknown) {
+        if (err instanceof Error) {
+            console.error('Error leyendo el archivo JSON:', err.message);
+        }
         return [];
-    };
+    }
 };
 
 const writePosts = (posts: Post[]) => {
     try {
         fs.writeFileSync(postsFilePath, JSON.stringify(posts, null, 2));
-    } catch (err) {
-        console.error('Error escribiendo el archivo JSON:', err);
-    };
+    } catch (err: unknown) {
+        if (err instanceof Error) {
+            console.error('Error escribiendo el archivo JSON:', err.message);
+        }
+    }
 };
 
 export async function GET() {
@@ -41,7 +46,7 @@ export async function POST(req: Request) {
             JSON.stringify({ error: 'Todos los campos son requeridos, excepto la imagen.' }),
             { status: 400 }
         );
-    };
+    }
     const posts = readPosts();
     const newPost: Post = {
         id: posts.length > 0 ? posts[posts.length - 1].id + 1 : 1,
