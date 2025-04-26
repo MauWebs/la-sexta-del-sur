@@ -1,5 +1,4 @@
 'use client';
-
 import { useState } from 'react';
 
 const videos = [
@@ -43,19 +42,17 @@ export default function VideosOfYoutube() {
             display: 'flex',
             flexDirection: 'row',
             alignItems: 'center',
-            width: '1375px',
+            width: '1360px',
             height: '318px',
-            margin: '0 auto',
-            marginBottom: '35px',
+            margin: '0px 0px 30px 30px',
             backgroundColor: '#0C0907',
             padding: '0px',
             gap: '20px',
             overflow: 'hidden',
             boxSizing: 'border-box',
-            marginRight: '20px',
         }}>
             <div style={{
-                width: '930px',
+                width: '900px',
                 height: '100%',
                 overflow: 'hidden'
             }}>
@@ -71,7 +68,7 @@ export default function VideosOfYoutube() {
 
             <div
                 style={{
-                    width: '390px',
+                    width: '420px',
                     display: 'flex',
                     flexDirection: 'column',
                     overflowY: 'auto',
@@ -93,7 +90,7 @@ export default function VideosOfYoutube() {
                         style={{
                             display: 'flex',
                             cursor: 'pointer',
-                            gap: '10px',
+                            gap: '30px',
                             backgroundColor: selectedVideo.id === video.id ? '#F19800' : 'transparent',
                             transition: '0.3s',
                             alignItems: 'center',

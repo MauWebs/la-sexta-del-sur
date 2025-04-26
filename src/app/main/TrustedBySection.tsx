@@ -6,21 +6,24 @@ export default function TrustedBySection() {
     const logos = [
         '/companies/McDonalds.svg',
         '/companies/PuertoDeBahiaBlanca.svg',
+        '/companies/KioscoLaTerminal.png',
         '/companies/remax.svg',
     ];
 
     return (
         <section
             style={{
-                padding: '4rem 0',
+                padding: '0rem 0',
                 paddingTop: '0px',
+                margin: '0px 22px',
+                paddingBottom: '1.5rem',
             }}
         >
             <div
                 style={{
                     maxWidth: '1100px',
                     margin: '0 auto',
-                    padding: '0 2rem',
+                    padding: '0 0rem',
                     textAlign: 'center',
                 }}
             >
@@ -65,7 +68,6 @@ export default function TrustedBySection() {
                 style={{
                     height: '2px',
                     backgroundColor: '#7C7C7C',
-                    margin: '0px 20px 0px 20px',
                     opacity: '50%',
                 }}
             />

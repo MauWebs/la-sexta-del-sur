@@ -2,7 +2,6 @@
 
 export default function PortOfBahiaBlancaBanner() {
     return (
-
         <article
             style={{
                 width: '100%',
@@ -21,7 +20,6 @@ export default function PortOfBahiaBlancaBanner() {
                     height: 'auto',
                 }}
             />
-
         </article>
     );
 };

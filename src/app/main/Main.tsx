@@ -1,9 +1,7 @@
 'use client';
-
 import LatestPosts from "./LatestPosts";
-import SecondLastPosts from "./SecondLastPosts";
-import TrustedBySection from "./TrustedBySection";
 import VideosOfYoutube from "./VideosOfYoutube";
+import TrustedBySection from "./TrustedBySection";
 
 export default function Main() {
     return (
