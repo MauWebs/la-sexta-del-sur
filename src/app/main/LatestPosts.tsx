@@ -1,14 +1,17 @@
 'use client';
-import { useState } from 'react';
 import Link from 'next/link';
+import { useState } from 'react';
 import allPosts from '../../../data/posts.json';
 import PortOfBahiaBlancaBanner from "./PortOfBahiaBlancaBanner";
 
 export default function LatestPosts() {
 
+    const [isHovered, setIsHovered] = useState(false);
+
     const sortedPosts = [...allPosts].sort((a, b) => b.id - a.id);
     const mainPosts = sortedPosts.slice(0, 3);
-    const secondaryPosts = sortedPosts.slice(3, 6);
+
+    // const secondaryPosts = sortedPosts.slice(3, 6);
 
     const trimDescription = (description: string, maxWords: number) => {
         const words = description.split(' ');
@@ -23,8 +26,6 @@ export default function LatestPosts() {
 
             {mainPosts.map((post, index) => {
                 const isEven = index % 2 === 0;
-                const [isHovered, setIsHovered] = useState(false); 
-
                 return (
                     <div key={post.id}>
                         <Link
@@ -36,8 +37,8 @@ export default function LatestPosts() {
                                 transition: 'opacity 0.3s ease',
                                 background: 'none',
                             }}
-                            onMouseEnter={() => setIsHovered(true)} 
-                            onMouseLeave={() => setIsHovered(false)} 
+                            onMouseEnter={() => setIsHovered(true)}
+                            onMouseLeave={() => setIsHovered(false)}
                         >
                             <div
                                 style={{
@@ -154,7 +155,7 @@ export default function LatestPosts() {
                     </div>
                 ))}
             </div> */}
-            
+
         </div>
     );
 };

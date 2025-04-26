@@ -1,5 +1,4 @@
 'use client';
-import Image from 'next/image';
 
 export default function TrustedBySection() {
 
@@ -50,7 +49,7 @@ export default function TrustedBySection() {
                                 maxWidth: '100%',
                             }}
                         >
-                            <Image
+                            <img
                                 src={logo}
                                 alt={`Logo ${index}`}
                                 width={140}
