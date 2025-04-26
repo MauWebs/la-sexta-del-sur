@@ -6,6 +6,8 @@ import PortOfBahiaBlancaBanner from "./PortOfBahiaBlancaBanner";
 
 export default function LatestPosts() {
 
+    const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+
     const sortedPosts = [...allPosts].sort((a, b) => b.id - a.id);
     const mainPosts = sortedPosts.slice(0, 3);
 
@@ -22,7 +24,7 @@ export default function LatestPosts() {
 
             {mainPosts.map((post, index) => {
                 const isEven = index % 2 === 0;
-                const [isHovered, setIsHovered] = useState(false);
+
                 return (
                     <div key={post.id}>
                         <Link
@@ -30,12 +32,12 @@ export default function LatestPosts() {
                             style={{
                                 textDecoration: 'none',
                                 color: 'inherit',
-                                opacity: isHovered ? '0.8' : '1',
+                                opacity: hoveredIndex === index ? '0.8' : '1',
                                 transition: 'opacity 0.3s ease',
                                 background: 'none',
                             }}
-                            onMouseEnter={() => setIsHovered(true)}
-                            onMouseLeave={() => setIsHovered(false)}
+                            onMouseEnter={() => setHoveredIndex(index)}
+                            onMouseLeave={() => setHoveredIndex(null)}
                         >
                             <div
                                 style={{
