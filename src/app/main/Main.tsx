@@ -10,5 +10,5 @@ export default function Main() {
             <TrustedBySection />
             <VideosOfYoutube />
         </main>
-    )
+    );
 };

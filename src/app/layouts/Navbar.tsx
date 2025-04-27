@@ -1,10 +1,12 @@
 'use client';
+import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 export default function Navbar() {
 
     const pathname = usePathname();
-    const isHome = pathname === '/' || pathname === '/#';
+    
+    const isActive = (linkPath: string) => pathname === linkPath || pathname.startsWith(linkPath);
 
     return (
         <nav style={{
@@ -36,33 +38,118 @@ export default function Navbar() {
                 flex: 1,
                 boxSizing: 'border-box',
             }}>
-                <a
-                    href="#"
-                    style={{
-                        color: '#FF5C00',
-                        pointerEvents: isHome ? 'none' : 'auto',
-                        opacity: isHome ? 1 : 0.7,
-                        display: 'flex',
-                        flexDirection: 'column',
-                        alignItems: 'center',
-                    }}
-                >
+                <Link href="/" style={{ 
+                    color: isActive('/') ? '#FF5C00' : 'inherit',
+                    position: 'relative',
+                }}>
                     Generales
-                    {isHome && (
+                    {isActive('/') && (
                         <span style={{
-                            marginTop: '2px',
+                            position: 'absolute',
+                            bottom: '-2px',
+                            left: 0,
                             width: '100%',
                             height: '2px',
                             backgroundColor: '#FF5C00',
                         }} />
                     )}
-                </a>
-                <a href="#">Nacionales</a>
-                <a href="#">Política</a>
-                <a href="#">Economía</a>
-                <a href="#">Policiales</a>
-                <a href="#">Deportes</a>
-                <a href="#">Mundo</a>
+                </Link>
+                <Link href="/nacionales" style={{ 
+                    color: isActive('/nacionales') ? '#FF5C00' : 'inherit',
+                    position: 'relative',
+                }}>
+                    Nacionales
+                    {isActive('/nacionales') && (
+                        <span style={{
+                            position: 'absolute',
+                            bottom: '-2px',
+                            left: 0,
+                            width: '100%',
+                            height: '2px',
+                            backgroundColor: '#FF5C00',
+                        }} />
+                    )}
+                </Link>
+                <Link href="/politica" style={{ 
+                    color: isActive('/politica') ? '#FF5C00' : 'inherit',
+                    position: 'relative',
+                }}>
+                    Política
+                    {isActive('/politica') && (
+                        <span style={{
+                            position: 'absolute',
+                            bottom: '-2px',
+                            left: 0,
+                            width: '100%',
+                            height: '2px',
+                            backgroundColor: '#FF5C00',
+                        }} />
+                    )}
+                </Link>
+                <Link href="/economia" style={{ 
+                    color: isActive('/economia') ? '#FF5C00' : 'inherit',
+                    position: 'relative',
+                }}>
+                    Economía
+                    {isActive('/economia') && (
+                        <span style={{
+                            position: 'absolute',
+                            bottom: '-2px',
+                            left: 0,
+                            width: '100%',
+                            height: '2px',
+                            backgroundColor: '#FF5C00',
+                        }} />
+                    )}
+                </Link>
+                <Link href="/policiales" style={{ 
+                    color: isActive('/policiales') ? '#FF5C00' : 'inherit',
+                    position: 'relative',
+                }}>
+                    Policiales
+                    {isActive('/policiales') && (
+                        <span style={{
+                            position: 'absolute',
+                            bottom: '-2px',
+                            left: 0,
+                            width: '100%',
+                            height: '2px',
+                            backgroundColor: '#FF5C00',
+                        }} />
+                    )}
+                </Link>
+                <Link href="/deportes" style={{ 
+                    color: isActive('/deportes') ? '#FF5C00' : 'inherit',
+                    position: 'relative',
+                }}>
+                    Deportes
+                    {isActive('/deportes') && (
+                        <span style={{
+                            position: 'absolute',
+                            bottom: '-2px',
+                            left: 0,
+                            width: '100%',
+                            height: '2px',
+                            backgroundColor: '#FF5C00',
+                        }} />
+                    )}
+                </Link>
+                <Link href="/mundo" style={{ 
+                    color: isActive('/mundo') ? '#FF5C00' : 'inherit',
+                    position: 'relative',
+                }}>
+                    Mundo
+                    {isActive('/mundo') && (
+                        <span style={{
+                            position: 'absolute',
+                            bottom: '-2px',
+                            left: 0,
+                            width: '100%',
+                            height: '2px',
+                            backgroundColor: '#FF5C00',
+                        }} />
+                    )}
+                </Link>
             </div>
 
             <div style={{
