@@ -10,10 +10,26 @@ export default function Home() {
     <>
       <Header />
       <Navbar />
-      <div style={{ display: 'flex', alignItems: 'stretch', marginTop: '90px' }}>
-        <Main />
-        <div style={{ width: '1.5px', backgroundColor: '#D5D1C9', margin: '37px 0px' }} />
-        <Aside />
+      <div style={{ marginTop: '90px' }}>
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'row',
+            alignItems: 'stretch',
+            flexWrap: 'wrap',
+          }}
+        >
+          <Main />
+          <div
+            style={{
+              width: '1.5px',
+              backgroundColor: '#D5D1C9',
+              margin: '37px 0px',
+              minHeight: '100px',
+            }}
+          />
+          <Aside />
+        </div>
       </div>
       <Footer />
     </>
