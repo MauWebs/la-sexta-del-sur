@@ -1,37 +1,28 @@
 'use client';
-import Header from "./layouts/Header";
-import Navbar from "./layouts/Navbar";
-import Footer from "./layouts/Footer";
 import Aside from "./aside/Aside";
 import Main from "./main/Main";
 
 export default function Home() {
   return (
     <>
-      <Header />
-      <Navbar />
-      <div style={{ marginTop: '90px' }}>
+
+      <div className="mt-[90px] w-full max-w-[1500px] mx-auto">
         <div
-          style={{
-            display: 'flex',
-            flexDirection: 'row',
-            alignItems: 'stretch',
-            flexWrap: 'wrap',
-          }}
+          className="w-full flex flex-col lg:flex-row py-7 gap-5"
         >
           <Main />
           <div
+            className="hidden lg:block"
             style={{
-              width: '1.5px',
+              width: '3px',
               backgroundColor: '#D5D1C9',
-              margin: '37px 0px',
-              minHeight: '100px',
+              minHeight: '100vh',
             }}
           />
           <Aside />
         </div>
       </div>
-      <Footer />
+
     </>
   );
 };

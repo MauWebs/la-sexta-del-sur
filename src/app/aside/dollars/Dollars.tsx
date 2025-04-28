@@ -66,14 +66,11 @@ export default function Dollars() {
 
     return (
         <section
+            className='w-full'
             style={{
                 border: '2px solid #D5D1C9',
-                padding: '10px 26px',
-                width: '435px',
                 boxSizing: 'border-box',
                 backgroundColor: '#F9F8F6',
-                margin: '0 auto',
-                marginLeft: '20px',
             }}
         >
             <h2
@@ -82,7 +79,6 @@ export default function Dollars() {
                     fontFamily: 'var(--font-publico-headline-bold)',
                     textAlign: 'center',
                     color: '#292219',
-                    margin: 0,
                 }}
             >
                 Dolar Hoy
@@ -98,42 +94,21 @@ export default function Dollars() {
                         borderBottom: index !== dollars.length - 1 ? '2px solid #D5D1C9' : 'none',
                     }}
                 >
-                    <div
-                        style={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'space-between',
-                            fontSize: '16px',
-                            fontFamily: 'var(--font-tt-commons-medium)',
-                            color: '#292219',
-                        }}
-                    >
-                        <span
-                            style={{
-                                fontFamily: 'var(--font-tt-commons-bold)',
-                                whiteSpace: 'nowrap',
-                                flex: 2,
-                            }}
-                        >
+                    <div className="flex items-center justify-between text-[16px] text-[#292219] text-sm md:text-base" >
+                        <span className="whitespace-nowrap pl-[10px] flex-2 text-[18px]" style={{ fontFamily:'var(--font-tt-commons-demibold)'}}>
                             {CUSTOM_NAMES[dollar.casa] || dollar.nombre}
                         </span>
 
-                        <div style={{ flex: 2, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-                            <span style={{ marginBottom: '4px' }}>Compra</span>
-                            <span style={{ color: '#FF5C00' }}>{formatPrice(dollar.compra)}</span>
+                        <div className="flex-2 flex flex-col justify-center items-center text-sm md:text-base">
+                            <span className="mb-1">Compra</span>
+                            <span className="text-[#FF5C00]">{formatPrice(dollar.compra)}</span>
                         </div>
 
-                        <div
-                            style={{
-                                width: '2px',
-                                height: '25px',
-                                backgroundColor: '#FF5C00',
-                                margin: '0 10px',
-                            }}
-                        />
-                        <div style={{ flex: 2, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-                            <span style={{ marginBottom: '4px' }}>Venta</span>
-                            <span style={{ color: '#FF5C00' }}>{formatPrice(dollar.venta)}</span>
+                        <div className="w-[2px] h-[25px] bg-[#FF5C00] mx-[10px]" />
+
+                        <div className="flex-2 flex flex-col justify-center items-center text-sm md:text-base">
+                            <span className="mb-1">Venta</span>
+                            <span className="text-[#FF5C00]">{formatPrice(dollar.venta)}</span>
                         </div>
 
                     </div>

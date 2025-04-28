@@ -20,6 +20,13 @@ export default function TrustedBySection() {
         >
             <div
                 style={{
+                    height: '2px',
+                    backgroundColor: '#7C7C7C',
+                    opacity: '50%',
+                }}
+            />
+            <div
+                style={{
                     maxWidth: '1100px',
                     margin: '0 auto',
                     padding: '0 0rem',
@@ -45,16 +52,17 @@ export default function TrustedBySection() {
                                 padding: '1rem',
                                 transition: 'filter 0.3s ease',
                                 cursor: 'pointer',
-                                height: '100%',
-                                maxWidth: '100%',
+                                height: '90px',
+                                width: '160px',
+                                overflow: 'hidden',
                             }}
                         >
                             <img
                                 src={logo}
                                 alt={`Logo ${index}`}
-                                width={140}
-                                height={80}
                                 style={{
+                                    width: '100%',
+                                    height: '100%',
                                     objectFit: 'contain',
                                 }}
                             />
@@ -62,7 +70,6 @@ export default function TrustedBySection() {
                     ))}
                 </div>
             </div>
-
             <div
                 style={{
                     height: '2px',

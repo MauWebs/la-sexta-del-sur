@@ -1,9 +1,8 @@
 'use client';
 import { useEffect, useState } from 'react';
 
-export default function Header() {
+export function Header() {
     const [formattedDate, setFormattedDate] = useState('');
-
     const updateDate = () => {
         const now = new Date();
         const formatter = new Intl.DateTimeFormat('es-AR', {

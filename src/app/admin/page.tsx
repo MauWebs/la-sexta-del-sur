@@ -32,7 +32,7 @@ export default function AdminPage() {
     };
 
     return (
-        <div style={{ margin: '20px', fontFamily: 'Arial, sans-serif' }}>
+        <div style={{ margin: '20px'}}>
             <h1 style={{ textAlign: 'center', color: '#000' }}>Agregar un nuevo Post</h1>
             <form
                 onSubmit={handleSubmit}
@@ -43,7 +43,6 @@ export default function AdminPage() {
                     margin: '0 auto',
                     padding: '20px',
                     border: '1px solid #ddd',
-                    borderRadius: '8px',
                     backgroundColor: '#f9f9f9',
                 }}
             >
@@ -56,7 +55,6 @@ export default function AdminPage() {
                         style={{
                             padding: '10px',
                             fontSize: '16px',
-                            borderRadius: '5px',
                             border: '1px solid #ddd',
                             width: '100%',
                         }}
@@ -81,7 +79,6 @@ export default function AdminPage() {
                         style={{
                             padding: '10px',
                             fontSize: '16px',
-                            borderRadius: '5px',
                             border: '1px solid #ddd',
                             width: '100%',
                         }}
@@ -96,7 +93,6 @@ export default function AdminPage() {
                         style={{
                             padding: '10px',
                             fontSize: '16px',
-                            borderRadius: '5px',
                             border: '1px solid #ddd',
                             width: '100%',
                             minHeight: '100px',
@@ -110,7 +106,6 @@ export default function AdminPage() {
                         backgroundColor: '#4CAF50',
                         color: 'white',
                         border: 'none',
-                        borderRadius: '5px',
                         cursor: 'pointer',
                         fontSize: '16px',
                         transition: 'background-color 0.3s ease',

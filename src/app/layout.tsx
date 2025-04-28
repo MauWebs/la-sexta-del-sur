@@ -1,6 +1,7 @@
 import localFont from 'next/font/local';
 import type { Metadata } from 'next';
 import './globals.css';
+import { Navbar, Header, Footer } from '../layouts';
 
 export const metadata: Metadata = {
   title: 'La Sexta Del Sur',
@@ -47,7 +48,10 @@ export default function RootLayout({
         ${ttCommonsBold.variable}
         ${publicoHeadlineBold.variable}
       `}>
+        <Header />
+        <Navbar/>
         {children}
+        <Footer />
       </body>
     </html>
   );

@@ -5,7 +5,7 @@ import TrustedBySection from "./TrustedBySection";
 
 export default function Main() {
     return (
-        <main>
+        <main className="w-full lg:w-8/12 ">
             <LatestPosts />
             <TrustedBySection />
             <VideosOfYoutube />
