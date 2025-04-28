@@ -10,7 +10,7 @@ export default function RenderNew() {
     return (
         <div className="p-6 max-w-3xl mx-auto mt-[85px]">
             <img src={post.img} alt="Post image" className="mb-4 w-full" />
-            <h1 className="font-bold" style={{marginBottom:'12px', fontSize:'26px'}}>{post.title}</h1>
+            <h1 className="font-bold" style={{ marginBottom: '12px', fontSize: '24px', fontFamily: 'var(--font-publico-headline-bold)' }}>{post.title}</h1>
             <p className="text-sm text-gray-500 mb-2">{post.date} - {post.target}</p>
             <p className="text-lg mb-4">{post.description}</p>
         </div>

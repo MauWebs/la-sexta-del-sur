@@ -42,9 +42,9 @@ export default function LatestPosts() {
                                     {post.target}
                                 </span>
 
-                                <h3 className='text-[20px] sm:text-[24px] md:text-[27px]' style={{ fontFamily: 'var(--font-tt-commons-medium)' }}>
+                                <h3 className='text-[20px] sm:text-[24px] md:text-[27px]' style={{ fontFamily: 'var(--font-publico-headline-bold)' }}>
                                     {post.title}
-                                </h3>
+                                </h3>  
 
                                 <p className='text-[16px] sm:text-[18px]' 
                                     style={{
