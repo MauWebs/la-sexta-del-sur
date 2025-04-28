@@ -3,14 +3,16 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-const navLinks = [
+const router = '/router'
+
+export const navLinks = [
     { href: '/', label: 'Generales' },
-    { href: '/nacionales', label: 'Nacionales' },
-    { href: '/politica', label: 'Política' },
-    { href: '/economia', label: 'Economía' },
-    { href: '/policiales', label: 'Policiales' },
-    { href: '/deportes', label: 'Deportes' },
-    { href: '/mundo', label: 'Mundo' },
+    { href: `${router}/national`, label: 'Nacionales' },
+    { href: `${router}/politics`, label: 'Política' },
+    { href: `${router}/economy`, label: 'Economía' },
+    { href: `${router}/police`, label: 'Policiales' },
+    { href: `${router}/sports`, label: 'Deportes' },
+    { href: `${router}/world`, label: 'Mundo' },
 ];
 
 const socialLinks = [
@@ -20,15 +22,9 @@ const socialLinks = [
 ];
 
 export function Navbar() {
-
     const pathname = usePathname();
-
     const [menuOpen, setMenuOpen] = useState(false);
-
-    const isLinkActive = (href: string) => {
-        return pathname === href;
-    };
-
+    const isLinkActive = (href: string) => pathname === href;
 
     return (
         <nav
@@ -41,7 +37,7 @@ export function Navbar() {
             }}
         >
             <div className="flex items-center">
-                <img src="/logo.svg" alt="logo del noticiero" className="pt-[2px] h-[45px]" />
+                <img src="/logo.svg" alt="news logo" className="pt-[2px] h-[45px]" />
             </div>
 
             <div className="hidden lg:flex flex-1 justify-center items-center" style={{ fontFamily: 'var(--font-tt-commons-regular)', gap: '40px', fontSize: '20px' }}>

@@ -12,9 +12,9 @@ export default function TrustedBySection() {
     return (
         <section
             style={{
-                padding: '0rem 0',
+                padding: '0rem 0rem',
                 paddingTop: '0px',
-                margin: '0px 22px',
+                margin: '0px 0px',
                 paddingBottom: '1.5rem',
             }}
         >

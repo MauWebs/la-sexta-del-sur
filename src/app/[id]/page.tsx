@@ -2,8 +2,7 @@
 import RenderNew from '../main/RenderNew';
 
 export default function Page() {
-    return (<>
+    return (
         <RenderNew />
-    </>
     );
 };

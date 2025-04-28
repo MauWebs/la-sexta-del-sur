@@ -64,7 +64,6 @@ export default function AdminPage() {
                         <option value="Política">Política</option>
                         <option value="Economía">Economía</option>
                         <option value="Policiales">Policiales</option>
-                        <option value="Tecnología">Tecnología</option>
                         <option value="Deportes">Deportes</option>
                         <option value="Mundo">Mundo</option>
                     </select>

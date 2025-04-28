@@ -18,7 +18,7 @@ export default function LatestPosts() {
     };
 
     return (
-        <div >
+        <div style={{ padding: '0px 0px' }}>
 
             <PortOfBahiaBlancaBanner />
 
@@ -44,9 +44,9 @@ export default function LatestPosts() {
 
                                 <h3 className='text-[20px] sm:text-[24px] md:text-[27px]' style={{ fontFamily: 'var(--font-publico-headline-bold)' }}>
                                     {post.title}
-                                </h3>  
+                                </h3>
 
-                                <p className='text-[16px] sm:text-[18px]' 
+                                <p className='text-[16px] sm:text-[18px]'
                                     style={{
                                         margin: '5px 0',
                                         color: '#5C5955',
