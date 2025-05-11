@@ -18,7 +18,7 @@ export default function LatestPosts() {
     };
 
     return (
-        <div style={{ padding: '0px 0px' }}>
+        <div className='px-4 py-4'>
 
             <PortOfBahiaBlancaBanner />
 
@@ -29,7 +29,7 @@ export default function LatestPosts() {
                     <div key={post.id}>
                         <Link
                             href={`/${post.id}`}
-                            className={`p-4 flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-center justify-center gap-3 ${isEven ? 'border-none' : 'border-t-2 border-b-2 border-[#D5D1C9]'}`}
+                            className={`px-0 py-4 flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-center justify-center gap-3 ${isEven ? 'border-none' : 'border-t-2 border-b-2 border-[#D5D1C9]'}`}
                             style={{
                                 opacity: hoveredIndex === index ? '0.8' : '1',
                                 transition: 'opacity 0.3s ease',

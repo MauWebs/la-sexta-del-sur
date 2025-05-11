@@ -17,14 +17,16 @@ export default function PostsWidget() {
     }, []);
 
     return (
-            <section className="w-full px-4 sm:px-0 bg-[#F9F8F6]">
+        <section className="w-full py-0 px-4 sm:px-0">
 
             {randomPosts.map((post) => (
+
                 <Link
                     key={post.id}
                     href={`/${post.id}`}
-                    className="block py-3"
+                    className="block py-3 border-b-[2px] border-[#D5D1C9]"
                 >
+
                     <span
                         className="text-[#FF5C00] text-[18px]"
                         style={{ fontFamily: 'var(--font-tt-commons-demibold)' }}
@@ -55,7 +57,9 @@ export default function PostsWidget() {
                         >
                             {trimDescription(post.description, 40)}
                         </p>
+
                     </div>
+
                 </Link>
             ))}
         </section>

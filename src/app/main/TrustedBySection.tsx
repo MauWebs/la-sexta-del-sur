@@ -12,11 +12,10 @@ export default function TrustedBySection() {
     return (
         <section
             style={{
-                padding: '0rem 0rem',
-                paddingTop: '0px',
                 margin: '0px 0px',
                 paddingBottom: '1.5rem',
             }}
+            className="px-4 sm:px-0 py-4"
         >
             <div
                 style={{
