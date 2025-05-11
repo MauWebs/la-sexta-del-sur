@@ -65,14 +65,10 @@ export default function Dollars() {
     if (error) return <p>Error: {error}</p>;
 
     return (
-        <section
-            className='w-full'
-            style={{
-                border: '2px solid #D5D1C9',
-                boxSizing: 'border-box',
-                backgroundColor: '#F9F8F6',
-            }}
-        >
+        <section className='w-full px-4 sm:px-0 sm:max-w-[700px] sm:mx-auto'>
+
+            <div style={{ borderTop: '2px solid #D5D1C9', margin: '8px 0' }}></div>
+
             <h2
                 style={{
                     fontSize: '27px',
@@ -91,11 +87,11 @@ export default function Dollars() {
                     key={dollar.casa}
                     style={{
                         padding: '10px 0',
-                        borderBottom: index !== dollars.length - 1 ? '2px solid #D5D1C9' : 'none',
+                        borderBottom: index !== dollars.length - 0 ? '2px solid #D5D1C9' : 'none',
                     }}
                 >
                     <div className="flex items-center justify-between text-[16px] text-[#292219] text-sm md:text-base" >
-                        <span className="whitespace-nowrap pl-[10px] flex-2 text-[18px]" style={{ fontFamily:'var(--font-tt-commons-demibold)'}}>
+                        <span className="whitespace-nowrap pl-[10px] flex-2 text-[18px]" style={{ fontFamily: 'var(--font-tt-commons-demibold)' }}>
                             {CUSTOM_NAMES[dollar.casa] || dollar.nombre}
                         </span>
 

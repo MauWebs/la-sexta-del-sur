@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
 
-      <div className="mt-[90px] w-full max-w-[1500px] mx-auto">
+      <div className="mt-[90px] w-full max-w-[1750px] mx-auto">
         <div
           className="w-full flex flex-col lg:flex-row py-7 gap-5"
         >

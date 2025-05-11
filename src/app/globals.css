@@ -14,7 +14,6 @@ a {
     color: inherit;
     outline: none;
     color: #000;
-    opacity: 70%;
     transition: color 0.3s ease, opacity 0.3s ease;
 }
 
