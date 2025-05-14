@@ -32,7 +32,7 @@ export default function AdminPage() {
     };
 
     return (
-        <div style={{ margin: '20px'}}>
+        <div style={{ margin: '20px', marginTop: "110px" }}>
             <h1 style={{ textAlign: 'center', color: '#000' }}>Agregar un nuevo Post</h1>
             <form
                 onSubmit={handleSubmit}
@@ -102,15 +102,15 @@ export default function AdminPage() {
                     type="submit"
                     style={{
                         padding: '10px 15px',
-                        backgroundColor: '#4CAF50',
+                        backgroundColor: '#ff8119',
                         color: 'white',
                         border: 'none',
                         cursor: 'pointer',
                         fontSize: '16px',
-                        transition: 'background-color 0.3s ease',
+                        transition: 'background-color 0.3s ease, opacity 0.3s ease',
                     }}
-                    onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#45a049'}
-                    onMouseOut={(e) => e.currentTarget.style.backgroundColor = '#4CAF50'}
+                    onMouseOver={(e) => e.currentTarget.style.opacity = '0.8'}
+                    onMouseOut={(e) => e.currentTarget.style.opacity = '1'}
                 >
                     Crear Post
                 </button>

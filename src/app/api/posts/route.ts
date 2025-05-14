@@ -41,22 +41,28 @@ export async function GET() {
 
 export async function POST(req: Request) {
     const { target, title, description } = await req.json();
+
     if (!target || !title || !description) {
         return new Response(
             JSON.stringify({ error: 'Todos los campos son requeridos, excepto la imagen.' }),
             { status: 400 }
         );
     }
+
     const posts = readPosts();
+    const newId = posts.length > 0 ? posts[posts.length - 1].id + 1 : 1;
+
     const newPost: Post = {
-        id: posts.length > 0 ? posts[posts.length - 1].id + 1 : 1,
+        id: newId,
         target,
         title,
         description,
-        img: '',
+        img: `/posts/${newId}.jpg`,
         date: new Date().toISOString(),
     };
+
     posts.push(newPost);
     writePosts(posts);
+
     return new Response(JSON.stringify(newPost), { status: 201 });
 };
